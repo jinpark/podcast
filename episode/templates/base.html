@@ -9,8 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="Jin Park">
 
-    <link rel="stylesheet" href="">
+    {% block title %}<title>We still need a podcast name</title>{% endblock %}
+
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    {% block stylesheets %}{% endblock %}
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,6 +20,24 @@
 </head>
 
 <body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a class="menu-a" href="{% url 'home_page' %}">Home</a></li>
+                <li><a class="menu-a" href="{% url 'about_page' %}">About</a></li>
+                <li><a class="menu-a" href="#">Subscribe</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle">
+            <a class="menu-a is-active" href="#menu" id="menu-open">Menu</a>
+            <a class="menu-a" href="#" id="menu-close">Close</a>
+        </div>
+
+        <h1 class="podcast-title title"><a class="nostyle" href="{% url 'home_page' %}"
+                                     title="Accountability Hour">The No Named Podcast</a></h1>
+    </header>
+
     <div class="content container">
         {% block content %}
         {% endblock %}
