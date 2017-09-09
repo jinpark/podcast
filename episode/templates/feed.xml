@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+	<channel>
+		<title>Something Sunshine</title>
+		<link>http://www.REPLACESITE.com</link>
+		<atom:link href="http://www.REPLACESITE.com/feed.xml/" rel="self" type="application/rss+xml" />
+		<language>en-us</language>
+		<copyright>&#x2117; &amp; &#xA9; 2017 Billy &amp; Jin</copyright>
+		<itunes:subtitle>SUBTITLE</itunes:subtitle>
+		<itunes:author>AUTHOR</itunes:author>
+		<itunes:summary>SUMMARY</itunes:summary>
+		<description>DESCRIPTION</description>
+		<itunes:owner>
+			<itunes:name>Billy and Jin</itunes:name>
+			<itunes:email>EMAIL</itunes:email>
+		</itunes:owner>
+		<itunes:image href="IMAGE LOCATION" />
+		<itunes:category text="SOMETHING"/>
+		<itunes:category text="SOMETHING 2"/>
+		<itunes:explicit>clean</itunes:explicit>
+
+		{% for episode in episodes %}
+		<item>
+			<title>{{ episode.title }}</title>
+
+			<link>http://www.REPLACESITE.com/?episode={{episode.number}}#episode-{{episode.number}}</link>
+
+			<itunes:author>Ahnmin and Bobby</itunes:author>
+
+			<itunes:subtitle>{{ episode.description|escape }}</itunes:subtitle>
+
+			<itunes:summary><![CDATA[{{ episode.description|safe }}]]></itunes:summary>
+
+			<itunes:image href="{{ episode.thumbnail }}" />
+
+			<enclosure url="{{ episode.file.path }}" length="{{ episode.file.size }}" type="audio/mp3" />
+
+			<guid isPermaLink="false">{{ episode.number }}-PODCASTNAME</guid>
+
+			<pubDate>{{ episode.created|date:"r" }}</pubDate>
+
+			<itunes:duration>{{ episode.duration }}</itunes:duration>
+
+			<itunes:explicit>clean</itunes:explicit>
+
+		</item>
+		{% endfor %}
+	</channel>
+
+</rss>
