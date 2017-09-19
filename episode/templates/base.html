@@ -12,6 +12,8 @@
     {% block title %}<title>We still need a podcast name</title>{% endblock %}
 
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'skeleton.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'normalize.css' %}" />
     {% block stylesheets %}{% endblock %}
 
     <!--[if lt IE 9]>
@@ -21,6 +23,8 @@
 
 <body>
     <header>
+        <h1 class="podcast-title title"><a class="nostyle" href="{% url 'home_page' %}"
+                                     title="Accountability Hour">The No Named Podcast</a></h1>
         <nav id="menu">
             <ul>
                 <li><a class="menu-a" href="{% url 'home_page' %}">Home</a></li>
@@ -33,9 +37,6 @@
             <a class="menu-a is-active" href="#menu" id="menu-open">Menu</a>
             <a class="menu-a" href="#" id="menu-close">Close</a>
         </div>
-
-        <h1 class="podcast-title title"><a class="nostyle" href="{% url 'home_page' %}"
-                                     title="Accountability Hour">The No Named Podcast</a></h1>
     </header>
 
     <div class="content container">
