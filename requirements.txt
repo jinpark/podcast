@@ -4,6 +4,7 @@ botocore==1.6.3
 dj-database-url==0.4.1
 Django==1.11.1
 django-storages==1.6.5
+django-summernote==0.8.8.2
 docutils==0.14
 gunicorn==19.6.0
 jmespath==0.9.3

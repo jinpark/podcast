@@ -12,3 +12,6 @@ class Episode(models.Model):
     number = models.PositiveIntegerField(default=1, help_text="The episode number")
     order = models.PositiveIntegerField(default=1, help_text="Order of the episode")
     show_notes = models.TextField(help_text="Show notes here!")
+
+    def __str__(self):
+        return u"{number} - {name}".format(number=self.number, name=self.name)
