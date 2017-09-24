@@ -2,11 +2,14 @@
 {% load static %}
 
 {% block content %}
-    <ul>
+    <ul class="episodes">
         {% for episode in episodes %}
             <li>
-                <p>{{ episode.number }}</p>
+                <p>Episode {{ episode.number }} - {{ episode.name }}</p>
                 <p>{{episode.description|safe}}</p>
+                <!-- <hr> -->
+                <!-- <h6>Show Notes</h6> -->
+                <!-- <p>{{episode.show_notes|safe}}</p> -->
                 <audio controls src="{{episode.file.url}}"></audio>
             </li>
         {% endfor %}
