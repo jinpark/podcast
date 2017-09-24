@@ -151,3 +151,17 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'jin-pleb-podcast'
 AWS_QUERYSTRING_AUTH = False
 # S3_USE_SIGV4 = True
+
+PODCAST_DATA = {
+    "name": "plebcast",
+    "site_url": "https://plebcast.herokuapp.com",
+    "copyright": "&#x2117; &amp; &#xA9; 2017 Billy &amp; Jin",
+    "subtitle": "A podcast about nothing",
+    "author": "Billy and Jin",
+    "summary": "Billy, from NZ, and Jin, from Korea, talk about tech.",
+    "description": "Billy, from NZ, and Jin, from Korea, talk about technology, working in another country, and chips",
+    "contact_email": "billy@billyfung.com",
+    "image_url": "https://i.imgur.com/pkfP6L8.jpg",
+    "categories": ["technology", "tech news"],
+    "explicit": False
+}
