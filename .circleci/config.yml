@@ -19,7 +19,6 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            python manage.py collectstatic
             python manage.py test
       - store_artifacts:
           path: test-reports/
