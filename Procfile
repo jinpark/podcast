@@ -1,1 +1,1 @@
-web: gunicorn podcast.wsgi
+web: gunicorn podcast.wsgi --timeout 60
