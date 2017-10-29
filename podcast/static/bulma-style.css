@@ -1,0 +1,32 @@
+.container {
+  text-align: center;
+}
+
+.title {
+  margin: 1em;
+}
+
+/*.navbar {
+  justify-content: center;
+  background-color: transparent;
+}*/
+
+.level:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+hr {
+  margin: 6px;
+}
+
+.content ul {
+  list-style-type: none;
+}
+
+audio {
+  width: 100%;
+}
+
+audio::-webkit-media-controls {
+  width: 100%;
+}
