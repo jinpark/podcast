@@ -3,7 +3,7 @@ from django.conf import settings
 from .models import Episode
 
 def home(request, template="home.html"):
-    context = {'episodes': Episode.objects.all().order_by('order')}
+    context = {'episodes': Episode.objects.all().order_by('-order')}
     return render(request, template, context)
 
 def about(request, template="about.html"):
